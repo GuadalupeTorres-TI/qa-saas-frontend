@@ -7,7 +7,7 @@ function App() {
 
   const handleAnalyze = async () => {
     setLoading(true);
-    const res = await fetch('http://localhost:3000/analyze', {
+    const res = await fetch('https://guadalupetorres-ti-test.onrender.com/analyze', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ url })
