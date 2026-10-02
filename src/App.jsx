@@ -100,9 +100,15 @@ if (!data) {
     <main className="qa-app">
       <header className="topbar">
         <a className="brand" href="#inicio">
-          <span className="brand-icon" aria-hidden="true">QA</span>
-          QA Auditor
-        </a>
+  <span className="brand-icon" aria-hidden="true">QA</span>
+
+  <span className="brand-text">
+    <span>QA Auditor</span>
+    <small className="brand-copyright">
+      © {new Date().getFullYear()} by Guadalupe Torres
+    </small>
+  </span>
+</a>
         <span className="tag">Auditoría web automatizada</span>
       </header>
 
