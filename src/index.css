@@ -427,5 +427,20 @@ footer { padding: 36px 0; margin-top: 40px; border-top: 1px solid #263750; font-
   .stat { transition: none !important; }
   .stat:hover { transform: none; }
   .motion-button { display: none; }
+  
 }
 
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand-copyright {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  color: inherit;
+  opacity: 0.8;
+}
