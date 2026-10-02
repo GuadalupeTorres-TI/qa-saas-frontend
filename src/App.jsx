@@ -42,13 +42,18 @@ function App() {
         }
       );
 
-      if (!response.ok) {
-        throw new Error(
-          `No se pudo completar el análisis (error ${response.status}).`
-        );
-      }
+      const data = await response.json().catch(() => null);
 
-      const data = await response.json();
+if (!response.ok) {
+  throw new Error(
+    data?.error ||
+    `No se pudo completar el análisis (error ${response.status}).`
+  );
+}
+
+if (!data) {
+  throw new Error('El servidor devolvió una respuesta inválida.');
+}
 
       if (typeof data.aiReport !== 'string' || !data.rawData) {
         throw new Error('El servidor respondió sin un reporte válido.');
